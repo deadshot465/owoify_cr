@@ -1,0 +1,12 @@
+name: owoify_cr
+version: 1.0.0
+
+authors:
+  - Tetsuki Syu <tetsuki.syu1315@gmail.com>
+
+description: |
+  Turning your worst nightmare into a Crystal shard. This is a Crystal port of mohan-cao's owoify-js, which will help you turn any string into nonsensical babyspeak similar to LeafySweet's infamous Chrome extension.
+
+crystal: 1.0.0
+
+license: MIT
