@@ -5,7 +5,7 @@ require "./utility/presets"
 # Owoify module is the main module where owoify function lies in.
 # Since owoify is literally just a function, users are expected to invoke owoify by calling Owoify.owoify().
 module Owoify
-  VERSION = "1.0.0"
+  VERSION = "1.0.1"
 
   # The main entry point of the owoify function.
   # Pass in the source string and the desired owoify level.
