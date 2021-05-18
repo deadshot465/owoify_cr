@@ -1,5 +1,7 @@
 language: crystal
-
 script:
-  - crystal spec
-  - crystal tool format --check
+- crystal spec
+- crystal tool format --check
+notifications:
+  slack:
+    secure: efTayoxAMj4z/OUWMfSNe9WkYzdbPOEf7XczFku9/IcqJy1iuxPNLT/eeXnaFG0M8Dq1WPBX6AXJAO9kKFWK/mAo8IsaECnCwWBbZNSqDV5DchLzR9ctygVd1fLTU4Q093SPDXWDuDhZDbVsQmY0G1VlwE1jAXLAkfPFld8fZtV0/8iagiLGscAC1MZsFJ5Tqm0Ely5Oh55cmgsm6b/VQHpVhThymVQJNKM9fRrtBXzeYFIkMppf+Ct5zrMT9jMJniDSL01Kr/NAVaQbXFIWne0Iq+cwoaepAA1aj+KeFfLCIkok0Ae6xQKGSlInQBuCqHArGPlWqWFB4/svvrBmNeNFfXCSD9B8NeOgCdzMcGbxmlnoSoSegD2Kz6DeEWxU2pkclSfCU07AV2SQgLRs7SZ+UMKNgeBGaoOcXibIJELCx+knw4Njk6RDx7hHbX+5NhOpSgeRrYDoLJKLBMlLbUP2b2fKmaUiKGZA15VSYD9haY6pNRlLMwwLXaV6Ma+oZDWfnySD3Jv2Y1sFZ4jwuNaIV9Fhka5osCiDIE/eJS/qEWA6tFMsD3/d/5pmGEoN6qiMYBZ6YHfXzbn+3/9yNzb7DEMGoIjT8k/s/8sAqfli9S223U0QdE0skmDuiVsdZtXPT6DLqOUz8owZD25GYYfT2KzB8BTUburS8s4z780=
