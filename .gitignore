@@ -9,3 +9,6 @@
 /shard.lock
 
 .editorconfig
+
+.DS_Store
+**/*/.DS_Store

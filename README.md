@@ -38,7 +38,7 @@ Yes, this is the latest port after [owoify_ex](https://github.com/deadshot465/ow
 require "owoify_cr"
 
 puts Owoify.owoify("This is the string to owo! Kinda cute isn't it?")
-puts Owoify.owoify("This is the string to owo! Kinda cute isn't it?", "uvu")
+puts Owoify.owoify("This is the string to owo! Kinda cute isn't it?", :uvu)
 
 # Example output:
 # This is teh stwing two owo! Kinda cute isn't it?
@@ -71,14 +71,20 @@ That being said, all regular expressions are declared beforehand rather than bei
 
 ## See also
 
-* [owoify-js](https://github.com/mohan-cao/owoify-js) - The original owoify-js repository.
-* [Owoify.Net](https://www.nuget.org/packages/Owoify.Net) - The C# port of Owoify written by me.
-* [Owoify++](https://github.com/deadshot465/OwoifyCpp) - The C++ port of Owoify written by me.
-* [owoify_rs](https://crates.io/crates/owoify_rs) - The Rust port of Owoify written by me.
-* [owoify-py](https://pypi.org/project/owoify-py/) - The Python port of Owoify written by me.
-* [owoify_dart](https://pub.dev/packages/owoify_dart) - The Dart port of Owoify written by me.
-* [owoify_rb](https://rubygems.org/gems/owoify_rb) - The Ruby port of Owoify written by me.
-* [owoifyKt](https://search.maven.org/search?q=g:%22io.github.deadshot465%22%20AND%20a:%22owoifyKt%22) - The Kotlin port of Owoify written by me. Since it's JVM, you can also use it with Java, Scala and Clojure.
-* [owoify-go](https://pkg.go.dev/github.com/deadshot465/owoify-go) - The Go port of Owoify written by me.
-* [OwoifySwift](https://github.com/deadshot465/OwoifySwift) - The Swift port of Owoify written by me.
-* [owoify_ex](https://hex.pm/packages/owoify_ex) - The Elixir port of Owoify written by me.
+- [owoify-js](https://github.com/mohan-cao/owoify-js) - The original owoify-js repository.
+- [Owoify.Net](https://www.nuget.org/packages/Owoify.Net/1.2.0) - The C# port of Owoify written by me.
+- [Owoify++](https://github.com/deadshot465/OwoifyCpp) - The C++ header-only port of Owoify written by me.
+- [owoify_rs](https://crates.io/crates/owoify_rs) - The Rust port of Owoify written by me.
+- [owoify-py](https://pypi.org/project/owoify-py/) - The Python port of Owoify written by me.
+- [owoify_dart](https://pub.dev/packages/owoify_dart) - The Dart port of Owoify written by me.
+- [owoify_rb](https://rubygems.org/gems/owoify_rb) - The Ruby port of Owoify written by me.
+- [owoify-go](https://pkg.go.dev/github.com/deadshot465/owoify-go/v2) - The Go port of Owoify written by me.
+- [owoifySwift](https://github.com/deadshot465/OwoifySwift) - The Swift port of Owoify written by me.
+- [owoifyKt](https://search.maven.org/search?q=g:%22io.github.deadshot465%22%20AND%20a:%22owoifyKt%22) - The Kotlin port of Owoify written by me.
+- [owoify_ex](https://hex.pm/packages/owoify_ex) - The Elixir port of Owoify written by me.
+- [owoify_cr](https://crystalshards.org/shards/github/deadshot465/owoify_cr) - The Crystal port of Owoify written by me.
+- [owoifynim](https://nimble.directory/pkg/owoifynim) - The Nim port of Owoify written by me.
+- [owoify-clj](https://clojars.org/net.clojars.deadshot465/owoify-clj) - The Clojure port of Owoify written by me.
+- [purescript-owoify](https://pursuit.purescript.org/packages/purescript-owoify) - The PureScript port of Owoify written by me.
+- [owoify-hs](https://hackage.haskell.org/package/owoify-hs) - The Haskell port of Owoify written by me.
+- [owoify_erl](https://hex.pm/packages/owoify_erl) - The Erlang port of Owoify written by me.
