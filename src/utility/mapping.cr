@@ -44,10 +44,14 @@ LY_TO_WY_UPPER                                        = /Ly/
 LY_TO_WY_LOWER                                        = /ly/
 PLE_TO_PWE                                            = /([Pp])le/
 NR_TO_NW_UPPER                                        = /NR/
-NR_TO_NW_LOWER                                        = /nr/
+NR_TO_NW_LOWER                                        = /([Nn])r/
+MEM_TO_MWEM_UPPER                                     = /Mem/
+MEM_TO_MWEM_LOWER                                     = /mem/
+NYWO_TO_NYO                                           = /([Nn])ywo/
 FUC_TO_FWUC                                           = /([Ff])uc/
 MOM_TO_MWOM                                           = /([Mm])om/
-ME_TO_MWE                                             = /([Mm])e/
+ME_TO_MWE_UPPER                                       = /^Me$/
+ME_TO_MWE_LOWER                                       = /^me$/
 N_VOWEL_TO_NY_FIRST                                   = /n([aeiou])/
 N_VOWEL_TO_NY_SECOND                                  = /N([aeiou])/
 N_VOWEL_TO_NY_THIRD                                   = /N([AEIOU])/
@@ -60,6 +64,15 @@ YOU_TO_U_LOWER                                        = /\byou\b/
 TIME_TO_TIM                                           = /\b([Tt])ime\b/
 OVER_TO_OWOR                                          = /([Oo])ver/
 WORSE_TO_WOSE                                         = /([Ww])orse/
+GREAT_TO_GWATE                                        = /([Gg])reat/
+AVIAT_TO_AWIAT                                        = /([Aa])viat/
+DEDICAT_TO_DEDITAT                                    = /([Dd])edicat/
+REMEMBER_TO_REMBER                                    = /([Rr])emember/
+WHEN_TO_WEN                                           = /([Ww])hen/
+FRIGHTENED_TO_FRIGTEN                                 = /([Ff])righten(ed)*/
+MEME_TO_MEM_FIRST                                     = /Meme/
+MEME_TO_MEM_SECOND                                    = /Mem/
+FEEL_TO_FELL                                          = /^([Ff])eel$/
 
 FACES = [
   "(・`ω´・)", ";;w;;", "owo", "UwU", ">w<", "^w^", "(* ^ ω ^)",
@@ -196,7 +209,15 @@ module Mapping
   }
 
   MAP_NR_TO_NW = ->(input : Word) {
-    input.replace(NR_TO_NW_LOWER, "nw").replace(NR_TO_NW_UPPER, "NW")
+    input.replace(NR_TO_NW_LOWER, "\\1w").replace(NR_TO_NW_UPPER, "NW")
+  }
+
+  MAP_MEM_TO_MWEM = ->(input : Word) {
+    input.replace(MEM_TO_MWEM_UPPER, "mwem").replace(MEM_TO_MWEM_LOWER, "Mwem")
+  }
+
+  UNMAP_NYWO_TO_NYO = ->(input : Word) {
+    input.replace(NYWO_TO_NYO, "\\1yo")
   }
 
   MAP_FUC_TO_FWUC = ->(input : Word) {
@@ -208,7 +229,7 @@ module Mapping
   }
 
   MAP_ME_TO_MWE = ->(input : Word) {
-    input.replace(ME_TO_MWE, "\\1we")
+    input.replace(ME_TO_MWE_UPPER, "Mwe").replace(ME_TO_MWE_LOWER, "mwe")
   }
 
   MAP_N_VOWEL_TO_NY = ->(input : Word) {
@@ -243,5 +264,37 @@ module Mapping
 
   MAP_WORSE_TO_WOSE = ->(input : Word) {
     input.replace(WORSE_TO_WOSE, "\\1ose")
+  }
+
+  MAP_GREAT_TO_GWATE = ->(input : Word) {
+    input.replace(GREAT_TO_GWATE, "\\1wate")
+  }
+
+  MAP_AVIAT_TO_AWIAT = ->(input : Word) {
+    input.replace(AVIAT_TO_AWIAT, "\\1wiat")
+  }
+
+  MAP_DEDICAT_TO_DEDITAT = ->(input : Word) {
+    input.replace(DEDICAT_TO_DEDITAT, "\\1editat")
+  }
+
+  MAP_REMEMBER_TO_REMBER = ->(input : Word) {
+    input.replace(REMEMBER_TO_REMBER, "\\1ember")
+  }
+
+  MAP_WHEN_TO_WEN = ->(input : Word) {
+    input.replace(WHEN_TO_WEN, "\\1en")
+  }
+
+  MAP_FRIGHTENED_TO_FRIGTEN = ->(input : Word) {
+    input.replace(FRIGHTENED_TO_FRIGTEN, "\\1rigten")
+  }
+
+  MAP_MEME_TO_MEM = ->(input : Word) {
+    input.replace(MEME_TO_MEM_FIRST, "mem").replace(MEME_TO_MEM_SECOND, "Mem")
+  }
+
+  MAP_FEEL_TO_FELL = ->(input : Word) {
+    input.replace(FEEL_TO_FELL, "\\1ell")
   }
 end

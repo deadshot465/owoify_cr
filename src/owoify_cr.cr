@@ -5,7 +5,7 @@ require "./utility/presets"
 # Owoify module is the main module where owoify function lies in.
 # Since owoify is literally just a function, users are expected to invoke owoify by calling Owoify.owoify().
 module Owoify
-  VERSION = "2.0.0"
+  VERSION = "2.1.0"
 
   # The main entry point of the owoify function.
   # Pass in the source string and the desired owoify level.
@@ -49,5 +49,15 @@ module Owoify
 
     result_strings = Utility.interleave_arrays(words, spaces).map { |x| x.to_s }
     result_strings.join
+  end
+
+  # Owoifies source string with :uwu owoness level.
+  def self.uwuify(source : String)
+    owoify(source, :uwu)
+  end
+
+  # Owoifies source string with :uvu owoness level.
+  def self.uvuify(source : String)
+    owoify(source, :uvu)
   end
 end

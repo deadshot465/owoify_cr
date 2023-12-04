@@ -28,6 +28,18 @@ describe Owoify do
     result.should_not eq(nil)
   end
 
+  it "should uwuify the source string" do
+    result = Owoify.uwuify(SOURCE)
+    result.should_not eq("")
+    result.should_not eq(nil)
+  end
+
+  it "should uvuify the source string" do
+    result = Owoify.uvuify(SOURCE)
+    result.should_not eq("")
+    result.should_not eq(nil)
+  end
+
   it "should give different result when levels are owo and uwu" do
     Owoify.owoify(SOURCE).should_not eq(Owoify.owoify(SOURCE, :uwu))
   end
